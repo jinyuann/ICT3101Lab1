@@ -78,7 +78,7 @@ namespace ICT3101Lab1
                 Console.WriteLine("\tNFL -Number of expected failure logarithmic first number beta second number initial failure third numer time");
                 Console.WriteLine("\tFIB -Failure intensity basic first number failureinifinite, second number experiencedfailure, third number faillurecpuhour");
                 Console.WriteLine("\tNFB -Number of expected failure basic first number failureinifinite, second number faillurecpuhour,third time");
-                Console.WriteLine("\t1 -Logarithmic single command 1st:beta 2nd:failurecpuhour 3rd:time 4th experiencedfailure ");
+                Console.WriteLine("\t1 -Logarithmic single command 1st:beta 2nd: failurecpuhour 3rd: time 4th experiencedfailure");
                 Console.Write("Your option? ");
                 string op = Console.ReadLine();
                 try
