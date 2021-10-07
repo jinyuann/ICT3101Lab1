@@ -1,5 +1,8 @@
-﻿using System;
+﻿
+using ICT3101Lab1;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 public class Calculator
@@ -7,7 +10,10 @@ public class Calculator
     public const int PositiveInfinity = int.MaxValue;
 
     public const int NegativeInfinity = int.MinValue;
+    
     public Calculator() { }
+
+   
     public double DoOperation(double num1, double num2,double num3,double  num4, string op)
     {
         double result = double.NaN; // Default value
@@ -68,6 +74,9 @@ public class Calculator
                 break;
             case "NFL":
                 result = FailureLog(num1, num2, num3);
+                break;
+            case "2":
+              //  result = GenMagicNum(num1);
                 break;
             case "1":
                 SingleLogarithmic(num1, num2, num3, num4);
@@ -240,5 +249,32 @@ public class Calculator
         Console.WriteLine(msg);
         return msg;
     }
+    
+
+    public double GenMagicNum(double input, IFileReader fileReader)
+    {
+        double result = 0; 
+        int choice = Convert.ToInt16(input);
+        //Dependency------------------------------
+       // FileReader getTheMagic = new FileReader1();
+        //----------------------------------------
+        string[] magicStrings = fileReader.Read("C:/Users/JIN YUAN NEO/source/repos/ICT3101Lab1/ICT3101Lab1/MagicNumbers.txt");
+        if((choice >= 0) && (choice < magicStrings.Length))
+        {
+            result = Convert.ToDouble(magicStrings[choice]);
+        }
+        result = (result > 0) ? (2 * result) : (-2 * result);
+        return result;
+    }
+    //*2 of the number in textfile
+    }
+
+public class FileReader1: IFileReader
+{
+    public string[] Read(string path) 
+    { return File.ReadAllLines(path);
+    }
+
+    
 }
 

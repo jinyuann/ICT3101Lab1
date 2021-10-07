@@ -1,14 +1,20 @@
+using ICT3101Lab1;
 using NUnit.Framework;
 namespace ICT3101_Caculator.UnitTests
 {
     public class CalculatorTests
     {
         private Calculator _calculator;
+        private IFileReader file;
+
+        
+
         [SetUp]
         public void Setup()
         {
             // Arrange
             _calculator = new Calculator();
+            file = new FileReader1();
         }
         [Test]
         public void Add_WhenAddingTwoNumbers_ResultEqualToSum()
@@ -162,8 +168,33 @@ namespace ICT3101_Caculator.UnitTests
         public void UnknownFunctionB_WhenGivenTest4_ResultThrowArgumnetException(){
             // Act      
             // Assert
-            Assert.That(() => _calculator.Combination(4,5), Throws.ArgumentException);}
+            Assert.That(() => _calculator.Combination(4,5), Throws.ArgumentException);
         }
+
+
+
+        [Test]
+        public void MagicNumbertest()
+
+        {   // Act      
+            double result = _calculator.GenMagicNum(0,file);
+            // Assert
+            Assert.That(result, Is.EqualTo(10));
+            // Act      
+            
+        }
+
+        [Test]
+        public void MagicNumbertest2()
+
+        {   // Act      
+            double result = _calculator.GenMagicNum(1,file);
+            // Assert
+            Assert.That(result, Is.EqualTo(0));
+            // Act      
+
+        }
+    }
 
     }
 

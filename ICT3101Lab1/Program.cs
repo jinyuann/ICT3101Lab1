@@ -61,6 +61,7 @@ namespace ICT3101Lab1
                 }
                 // Ask the user to choose an operator.
                 Console.WriteLine("Choose an operator from the following list:");
+                Console.WriteLine("\t2 -MAGIC NUMBER");
                 Console.WriteLine("\ta -Add");
                 Console.WriteLine("\ts -Subtract");
                 Console.WriteLine("\tm -Multiply");
