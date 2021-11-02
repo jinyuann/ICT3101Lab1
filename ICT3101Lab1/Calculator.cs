@@ -110,7 +110,7 @@ public class Calculator
     public double Triangle(double num1, double num2)
     {
         double answer = ((num1 * num2) * 0.5);
-        if (num1 < 0 || num2<0)
+        if (num1 <= 0 || num2<=0)
         {
             throw new ArgumentException();
         }
@@ -121,16 +121,17 @@ public class Calculator
     public double Divide(double num1, double num2)
 
     {
-        /*if (num1 == 0)
+        
+        /*if (num1==0 && num2== 0){
+            return 1;
+        }*/
+        if (num1 == 0)
         {
             throw new ArgumentException();
         }
         if (num2 == 0)
         {
             throw new ArgumentException();
-        }*/
-        if (num1==0 && num2== 0){
-            return 1;
         }
         if (Double.IsPositiveInfinity(num1 / num2)) {
             Console.WriteLine("Asdasdasd");
@@ -166,7 +167,13 @@ public class Calculator
         return answer;
     }
     public double Circle(double num1)
-    { return ((num1 * num1) * 3.142); }
+    {
+        if (num1 <= -1 || num1==0)
+        {
+            throw new ArgumentException();
+        }
+        return ((num1 * num1) * 3.142); 
+    }
 
     public double Permuatations(double num1, double num2)
     {

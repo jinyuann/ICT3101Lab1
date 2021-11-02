@@ -1,4 +1,4 @@
-﻿using ICT3101Lab1;
+﻿/*using ICT3101Lab1;
 using Moq;
 using NUnit.Framework;
 
@@ -17,7 +17,7 @@ namespace ICT3101_Caculator.UnitTests
             // Arrange
             _calculator = new Calculator();
             _mockFileReader = new Mock<IFileReader>();
-            _mockFileReader.Setup(fr => fr.Read("C:/Users/JIN YUAN NEO/source/repos/ICT3101Lab1/ICT3101Lab1/MagicNumbers.txt")).Returns(new string[2] { "42", "42" });
+            _mockFileReader.Setup(fr => fr.Read("C:/Users/JIN YUAN NEO/source/repos/ICT3101Lab1/ICT3101Lab1/MagicNumbers.txt")).Returns(new string[2] { "42", "45" });
         }
 
 
@@ -38,9 +38,10 @@ namespace ICT3101_Caculator.UnitTests
         {   // Act      
             double result = _calculator.GenMagicNum(1, _mockFileReader.Object);
             // Assert
-            Assert.That(result, Is.EqualTo(84));
+            Assert.That(result, Is.EqualTo(90));
             // Act      
 
         }
     }
 }
+*/
