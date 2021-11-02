@@ -17,7 +17,7 @@ namespace ICT3101_Calculator.UnitTests
             // Setup local Selenium WebDriver
             ChromeOptions option = new ChromeOptions();
             option.AddArgument("--headless");
-            _driver = new ChromeDriver("d:/downloads",option);
+            _driver = new ChromeDriver(@"../../../../", option);
         }
         [Test]
         public void GoogleAdd_WhenAdding2and2_ResultEquals4()

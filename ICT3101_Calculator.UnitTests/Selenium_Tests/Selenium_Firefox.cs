@@ -16,7 +16,8 @@ namespace namespaceICT3101_Calculator.UnitTests
             // Setup local Selenium WebDriver
             FirefoxOptions option = new FirefoxOptions();
             option.AddArgument("--headless");
-            _driver = new FirefoxDriver("d:/downloads",option);
+            _driver = new FirefoxDriver(@"../../../../", option);
+
         }
         [Test]
         public void GoogleSubtract_WhenSubracting2from6_ResultEquals4()
